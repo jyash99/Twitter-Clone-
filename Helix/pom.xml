@@ -398,9 +398,9 @@
             <properties>
                 <DB_URL>jdbc:postgresql://localhost:5432/</DB_URL>
                 <BASE_DIR>C:\Users\Yash Jain\IdeaProjects\Helix</BASE_DIR>
-                <DB_NAME>twitter</DB_NAME>
-                <DB_USERNAME>postgres</DB_USERNAME>
-                <DB_PASSWORD>Sangeeta5@1234</DB_PASSWORD>
+                <DB_NAME>Your_Database_Name</DB_NAME>
+                <DB_USERNAME>Your_Database_UserName</DB_USERNAME>
+                <DB_PASSWORD>Your_Database_Password</DB_PASSWORD>
                 <SERVER_DOMAIN>localhost:8080</SERVER_DOMAIN>
             </properties>
         </profile>
