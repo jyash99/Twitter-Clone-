@@ -17,4 +17,9 @@ public class Tables {
 	 * The table public.member
 	 */
 	public static final tech.codingclub.helix.tables.Member MEMBER = tech.codingclub.helix.tables.Member.MEMBER;
+
+	/**
+	 * The table public.tweet
+	 */
+	public static final tech.codingclub.helix.tables.Tweet TWEET = tech.codingclub.helix.tables.Tweet.TWEET;
 }

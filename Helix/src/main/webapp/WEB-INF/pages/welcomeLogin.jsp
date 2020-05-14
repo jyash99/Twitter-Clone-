@@ -56,7 +56,7 @@
                       success: function(response) {
                            if(!!response) {
                                if(response.is_Login === true) {
-                                    location.href = "/welcome";
+                                    location.href = "/uitest";
                                } else {
                                     var email = $("#signup-email").val("");
                                     var password = $("#signup-password").val("");

@@ -19,9 +19,24 @@ import java.util.Properties;
 public class NonAPIController extends BaseController {
     private static final Logger logger = Logger.getLogger(NonAPIController.class);
 
+    @RequestMapping(method = RequestMethod.GET, value = "/test")
+    public
+    @ResponseBody
+    String testControllerMethod(ModelMap model) {
+        logger.info("Test call!");
+        return "Test successful!";
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/error")
     public
     String error(ModelMap model) {
         return "404";
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/uitest")
+    public
+    String uiTest(ModelMap model) {
+        return "uiTest";
+    }
+
 }

@@ -21,6 +21,16 @@ public class LoginController extends BaseController {
 
     private static Logger logger = Logger.getLogger(MainController.class);
 
+    @RequestMapping(method = RequestMethod.GET, value = "/admin")
+    public String adminLogin(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        return "adminLogin";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/user")
+    public String userLogin(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
+        return "userLogin";
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/welcome")
     public String welcome(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
         return "welcomeLogin";
