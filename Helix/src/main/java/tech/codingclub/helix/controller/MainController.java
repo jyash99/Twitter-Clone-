@@ -92,9 +92,8 @@ public class MainController extends BaseController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/welcome")
-    public String getWelcomePage(ModelMap modelMap, HttpServletResponse response, HttpServletRequest request) {
-        Member member = ControllerUtils.getCurrentMember(request);
-        modelMap.addAttribute("NAME", member.name);
+    public
+    String uiTest(ModelMap model) {
         return "welcome";
     }
 

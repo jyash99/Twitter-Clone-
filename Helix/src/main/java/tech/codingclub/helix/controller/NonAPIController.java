@@ -32,11 +32,4 @@ public class NonAPIController extends BaseController {
     String error(ModelMap model) {
         return "404";
     }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/uitest")
-    public
-    String uiTest(ModelMap model) {
-        return "uiTest";
-    }
-
 }

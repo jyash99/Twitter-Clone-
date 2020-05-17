@@ -11,7 +11,7 @@ package tech.codingclub.helix;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Public extends org.jooq.impl.SchemaImpl {
 
-	private static final long serialVersionUID = -111904266;
+	private static final long serialVersionUID = 1992697392;
 
 	/**
 	 * The singleton instance of <code>public</code>
@@ -47,6 +47,7 @@ public class Public extends org.jooq.impl.SchemaImpl {
 
 	private final java.util.List<org.jooq.Table<?>> getTables0() {
 		return java.util.Arrays.<org.jooq.Table<?>>asList(
+			tech.codingclub.helix.tables.Followers.FOLLOWERS,
 			tech.codingclub.helix.tables.Member.MEMBER,
 			tech.codingclub.helix.tables.Tweet.TWEET);
 	}

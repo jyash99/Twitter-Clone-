@@ -25,12 +25,15 @@ public class Keys {
 	// UNIQUE and PRIMARY KEY definitions
 	// -------------------------------------------------------------------------
 
-	public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> MEMBERS_PKEY = UniqueKeys0.MEMBERS_PKEY;
+	public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.FollowersRecord> FOLLOWERS_USER_ID_FOLLOWING_ID_KEY = UniqueKeys0.FOLLOWERS_USER_ID_FOLLOWING_ID_KEY;
+	public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> MEMBER_PKEY = UniqueKeys0.MEMBER_PKEY;
 
 	// -------------------------------------------------------------------------
 	// FOREIGN KEY definitions
 	// -------------------------------------------------------------------------
 
+	public static final org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowersRecord, tech.codingclub.helix.tables.records.MemberRecord> FOLLOWERS__FOLLOWERS_USER_ID_FKEY = ForeignKeys0.FOLLOWERS__FOLLOWERS_USER_ID_FKEY;
+	public static final org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowersRecord, tech.codingclub.helix.tables.records.MemberRecord> FOLLOWERS__FOLLOWERS_FOLLOWING_ID_FKEY = ForeignKeys0.FOLLOWERS__FOLLOWERS_FOLLOWING_ID_FKEY;
 
 	// -------------------------------------------------------------------------
 	// [#1459] distribute members to avoid static initialisers > 64kb
@@ -42,6 +45,12 @@ public class Keys {
 	}
 
 	private static class UniqueKeys0 extends org.jooq.impl.AbstractKeys {
-		public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> MEMBERS_PKEY = createUniqueKey(tech.codingclub.helix.tables.Member.MEMBER, tech.codingclub.helix.tables.Member.MEMBER.EMAIL);
+		public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.FollowersRecord> FOLLOWERS_USER_ID_FOLLOWING_ID_KEY = createUniqueKey(tech.codingclub.helix.tables.Followers.FOLLOWERS, tech.codingclub.helix.tables.Followers.FOLLOWERS.USER_ID, tech.codingclub.helix.tables.Followers.FOLLOWERS.FOLLOWING_ID);
+		public static final org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> MEMBER_PKEY = createUniqueKey(tech.codingclub.helix.tables.Member.MEMBER, tech.codingclub.helix.tables.Member.MEMBER.ID);
+	}
+
+	private static class ForeignKeys0 extends org.jooq.impl.AbstractKeys {
+		public static final org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowersRecord, tech.codingclub.helix.tables.records.MemberRecord> FOLLOWERS__FOLLOWERS_USER_ID_FKEY = createForeignKey(tech.codingclub.helix.Keys.MEMBER_PKEY, tech.codingclub.helix.tables.Followers.FOLLOWERS, tech.codingclub.helix.tables.Followers.FOLLOWERS.USER_ID);
+		public static final org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowersRecord, tech.codingclub.helix.tables.records.MemberRecord> FOLLOWERS__FOLLOWERS_FOLLOWING_ID_FKEY = createForeignKey(tech.codingclub.helix.Keys.MEMBER_PKEY, tech.codingclub.helix.tables.Followers.FOLLOWERS, tech.codingclub.helix.tables.Followers.FOLLOWERS.FOLLOWING_ID);
 	}
 }

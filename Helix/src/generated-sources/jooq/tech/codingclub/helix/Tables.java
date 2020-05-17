@@ -14,6 +14,11 @@ package tech.codingclub.helix;
 public class Tables {
 
 	/**
+	 * The table public.followers
+	 */
+	public static final tech.codingclub.helix.tables.Followers FOLLOWERS = tech.codingclub.helix.tables.Followers.FOLLOWERS;
+
+	/**
 	 * The table public.member
 	 */
 	public static final tech.codingclub.helix.tables.Member MEMBER = tech.codingclub.helix.tables.Member.MEMBER;

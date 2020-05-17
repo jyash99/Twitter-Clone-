@@ -11,7 +11,7 @@ package tech.codingclub.helix.tables.records;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MemberRecord extends org.jooq.impl.UpdatableRecordImpl<tech.codingclub.helix.tables.records.MemberRecord> implements org.jooq.Record8<java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Long> {
 
-	private static final long serialVersionUID = 382618335;
+	private static final long serialVersionUID = 381663050;
 
 	/**
 	 * Setter for <code>public.member.name</code>.
@@ -133,7 +133,7 @@ public class MemberRecord extends org.jooq.impl.UpdatableRecordImpl<tech.codingc
 	 * {@inheritDoc}
 	 */
 	@Override
-	public org.jooq.Record1<java.lang.String> key() {
+	public org.jooq.Record1<java.lang.Long> key() {
 		return (org.jooq.Record1) super.key();
 	}
 

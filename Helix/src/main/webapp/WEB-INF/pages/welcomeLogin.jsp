@@ -7,7 +7,7 @@
  <body>
      <section id="signup-box">
           <h1>Login Your Account</h1>
-          <p>Sign Up</p>
+          <p>Sign In</p>
           <form id="signup-form" method = "POST">
                 <label for="email">Email</label><br>
                 <input id="signup-email" type="email" name="email" placeholder="Enter Your Email"><br>
@@ -56,7 +56,7 @@
                       success: function(response) {
                            if(!!response) {
                                if(response.is_Login === true) {
-                                    location.href = "/uitest";
+                                    location.href = "/welcome";
                                } else {
                                     var email = $("#signup-email").val("");
                                     var password = $("#signup-password").val("");

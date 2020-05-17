@@ -36,6 +36,10 @@ public class Member extends MemberBase {
         return token;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public Boolean getIs_verified() {
         return is_verified;
     }

@@ -11,7 +11,7 @@ package tech.codingclub.helix.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables.records.MemberRecord> {
 
-	private static final long serialVersionUID = 1576066034;
+	private static final long serialVersionUID = -1208528020;
 
 	/**
 	 * The singleton instance of <code>public.member</code>
@@ -101,7 +101,7 @@ public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables
 	 */
 	@Override
 	public org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> getPrimaryKey() {
-		return tech.codingclub.helix.Keys.MEMBERS_PKEY;
+		return tech.codingclub.helix.Keys.MEMBER_PKEY;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables
 	 */
 	@Override
 	public java.util.List<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord>> getKeys() {
-		return java.util.Arrays.<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord>>asList(tech.codingclub.helix.Keys.MEMBERS_PKEY);
+		return java.util.Arrays.<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord>>asList(tech.codingclub.helix.Keys.MEMBER_PKEY);
 	}
 
 	/**
