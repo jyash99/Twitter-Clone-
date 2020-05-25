@@ -16,6 +16,9 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="268435456"/>
+    </bean>
 
     <mvc:interceptors>
         <bean class="tech.codingclub.helix.controller.ApplicationInterceptor"/>
